@@ -50,19 +50,19 @@ with st.container(border=True):
     # Left Column
     with col_left:
         st.markdown("#### 👤 Personal Information")
-        age = st.number_input("🎂 Age", min_value=18, max_value=90, value=25)
+        age = st.number_input("🎂 Age", min_value=18, max_value=90)
         gender = st.selectbox('👤 Gender', options=gender_list)
         education = st.selectbox('🎓 Education Level', options=education_list)
 
         st.markdown("#### 💼 Financial Information")
         income = st.number_input("💵 Annual Income ($)", min_value=0, value=50000, step=5000)
-        emp_exp = st.number_input("💼 Employment Experience (years)", min_value=0, value=3)
+        emp_exp = st.number_input("💼 Employment Experience (years)", min_value=0)
         home_ownership = st.selectbox('🏠 Home Ownership Status', options=home_ownership_list)
 
     # Right Column
     with col_right:
         st.markdown("#### 💰 Loan & Credit Information")
-        loan_amount = st.number_input("💰 Loan Amount ($)", min_value=0, value=15000, step=1000)
+        loan_amount = st.number_input("💰 Loan Amount ($)", min_value=0, step=1000)
         loan_intent = st.selectbox('🎯 Loan Purpose', options=loan_intent_list)
         loan_int_rate = st.number_input("📈 Interest Rate (%)", min_value=0.0, value=10.0, step=0.5)
         loan_percent_income = st.number_input("📊 Loan as % of Income", min_value=0.0, max_value=1.0, value=0.25, step=0.05)
@@ -126,3 +126,4 @@ with col3:
 st.markdown("---")
 st.markdown("**💫 Smart Loan Predictor** | *Powered by Machine Learning* | Made with ❤️ using Streamlit")
 st.caption("Disclaimer: This is a prediction tool. Final loan approval depends on bank policies and additional verification.")
+
